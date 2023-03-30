@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+  <body>
+    <div>
+      <p-dropdown
+        [options]="languages"
+        [(ngModel)]="selectedLanguage"
+        (onChange)="changeLanguage($event)"
+        optionLabel="label"
+      >
+      </p-dropdown>
 
-<body>
-  <p-button icon="pi pi-check"></p-button>
+      <h1 translate>mainPhrase</h1>
+      <h2 translate>subPhrase</h2>
+      <!-- <button click (click)="changeLanguage()" translate> buttonPhrase </button> -->
+    </div>
 
-      
-  <div class="text-red-600">Sagar .l.</div>
-</body>
-
+    <div class="text-red-600">Sagar .l.</div>
+  </body>
 </html>
