@@ -12,6 +12,11 @@ import { PrimeNgModule } from 'src/prime-ng.module';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
+import * as firebase from 'firebase/app';
+import { environment } from 'src/environments/environment';
+
+firebase.initializeApp(environment.firebaseConfig)
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
